@@ -1,0 +1,43 @@
+.about {
+  background: url("../img/about.jpg");
+  background-size: cover;
+}
+.about__overlay {
+  background-color: rgba(24, 37, 69, 0.9);
+}
+.about__us {
+  color: $white;
+  padding: 80px 30px 80px 26px;
+  @media (min-width: $m) {
+    width: 845px;
+    margin: 0 auto;
+    padding: 140px 0;
+  }
+  @media (min-width: $l) {
+    padding: 194px 0 207px;
+  }
+}
+.about__title {
+  font-size: 18px;
+  line-height: 1.2;
+  @media (min-width: $s) {
+    font-size: 26px;
+    .break {
+      display: none;
+    }
+  }
+  @media (min-width: $l) {
+    font-size: 38px;
+  }
+}
+.about__text {
+  padding: 24px 0 40px;
+  @media (min-width: $s) {
+    font-size: 18px;
+  }
+  @media (min-width: $m) {
+    font-size: 22px;
+    padding-top: 42px;
+    padding-bottom: 50px;
+  }
+}

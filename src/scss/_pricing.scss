@@ -1,0 +1,264 @@
+.pricing__wrapper {
+  padding: 0 30px;
+  max-width: 660px;
+  margin: 0 auto;
+  @media (min-width: $m) {
+    display: flex;
+    max-width: 100%;
+  }
+  @media (min-width: $l) {
+    padding: 0 60px;
+  }
+  @include boxed();
+}
+.pricing__plan {
+  margin-bottom: 30px;
+  line-height: 1;
+  flex: 1;
+}
+.plan__header {
+  padding: 22px 0;
+  color: $white;
+  text-align: center;
+  font-size: 18px;
+  @media (min-width: $m) {
+    height: 180px;
+  }
+  @media (min-width: $l) {
+    font-size: 22px;
+    height: 195px;
+    svg {
+      width: 21px;
+      height: 21px;
+    }
+  }
+}
+.plan__title {
+  font-weight: 700;
+  text-transform: uppercase;
+  @media (min-width: $m) {
+    font-size: 16px;
+  }
+  @media (min-width: $l) {
+    font-size: 22px;
+  }
+}
+.plan__subtitle {
+  font-weight: 500;
+  padding: 10px 0 20px;
+}
+.plan__full-price {
+  color: $c-price-full;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+.plan__lower-price {
+  padding-top: 10px;
+  font-size: 36px;
+  font-weight: 700;
+  text-decoration: none;
+  @media (min-width: $l) {
+    font-size: 46px;
+  }
+}
+.plan__btn {
+  padding: 36px 0;
+  display: none;
+  @media (min-width: $m) {
+    display: block;
+  }
+}
+.plan__body {
+  margin-top: 3px;
+  border: 1px solid $c-price-border;
+  font-family: "Open Sans", sans-serif;
+  color: $c-text--dark;
+}
+
+.plan__item {
+  border-bottom: 1px solid $c-price-border;
+  padding: 0 24px 0 30px;
+  height: 60px;
+  @include flexCenter();
+  position: relative;
+  @media (min-width: $l) {
+    font-size: 18px;
+  }
+}
+.plan__icon {
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+}
+.plan__about {
+  @media (min-width: $m) {
+    display: none;
+  }
+}
+.plan__check {
+  margin-left: auto;
+  @media (min-width: $m) {
+    margin-left: 0;
+    svg {
+      width: 23px;
+      height: 19px;
+    }
+  }
+}
+.plan__sum {
+  padding-top: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  display: none;
+  @media (min-width: $m) {
+    display: block;
+  }
+}
+.btn--plan {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  padding: 18px 60px;
+  margin: 15px auto;
+  @media (min-width: $m) {
+    padding: 18px 40px;
+  }
+  @media (min-width: $l) {
+    font-size: 16px;
+    padding: 22px 77px;
+    border-radius: 30px;
+    margin: 24px auto 30px;
+  }
+}
+.plan__header--single,
+.btn--single {
+  background: $c-single;
+}
+.plan__sum--single {
+  color: $c-single;
+}
+.plan__header--monthly,
+.btn--monthly {
+  background: $c-monthly;
+}
+.plan__sum--monthly {
+  color: $c-monthly;
+}
+.plan__header--unlimited,
+.btn--unlimited {
+  background: $c-unlimited;
+}
+.plan__sum--unlimited {
+  color: $c-unlimited;
+}
+
+.pricing__info {
+  padding-bottom: 18px;
+}
+.pricing__switch {
+  @include flexCenter();
+  @media (min-width: $m) {
+    flex-direction: column;
+  }
+}
+.pricing__bill {
+  color: $black;
+  margin-right: auto;
+  @media (min-width: $s) {
+    font-size: 16px;
+  }
+  @media (min-width: $m) {
+    margin-right: 0;
+  }
+  @media (min-width: $l) {
+    font-size: 18px;
+  }
+}
+.bill__monthly {
+  font-weight: 700;
+}
+.pricing__save {
+  padding-top: 10px;
+  color: $c-monthly;
+  font-weight: 600;
+  text-align: left;
+  @media (min-width: $s) {
+    font-size: 18px;
+  }
+  @media (min-width: $m) {
+    text-align: center;
+    padding-top: 0;
+  }
+  @media (min-width: $m) {
+    font-size: 26px;
+  }
+}
+.plan__header--info {
+  font-size: 14px;
+  text-align: left;
+  @media (min-width: $m) {
+    padding-top: 35px;
+  }
+}
+.plan__body--info {
+  display: none;
+  @media (min-width: $m) {
+    display: block;
+  }
+}
+.plan__btn--info,
+.plan__footer--info {
+  display: none;
+  @media (min-width: $m) {
+    display: block;
+    visibility: hidden;
+  }
+}
+
+// pricing switch
+.pricing__check {
+  width: 0;
+  height: 0;
+  display: none;
+}
+.pricing__label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 55px;
+  height: 28px;
+  background: $white;
+  display: block;
+  position: relative;
+  border: 1px solid $c-switch-border;
+  border-radius: 40px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 1px solid $c-secondary;
+    background: $white;
+    transition: 0.2s ease;
+  }
+  @media (min-width: $m) {
+    margin: 22px 0;
+  }
+}
+.pricing__check:checked + .pricing__label {
+  background: $white;
+  &::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+    background: $c-switch-in;
+  }
+}
+.pricing__label:active::after {
+  width: 30px;
+}
+.is-hidden {
+  display: none;
+}

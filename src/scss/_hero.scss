@@ -1,0 +1,106 @@
+.hero {
+  background: url("../img/hero.png") no-repeat;
+  background-position: center top 60px;
+  background-size: cover;
+  padding-bottom: 20px;
+  position: relative;
+  @media (min-width: $m) {
+    padding-bottom: 0;
+    height: 100%;
+    background-position: center top;
+  }
+}
+.hero__content {
+  @media (min-width: $m) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
+.hero__headline {
+  color: $white;
+  font-size: 22px;
+  text-align: center;
+  padding: 90px 0;
+  @media (min-width: $s) {
+    font-size: 38px;
+  }
+  @media (min-width: $l) {
+    font-size: 48px;
+    line-height: 1.2;
+    padding-bottom: 110px;
+  }
+  @media (min-width: $xl) {
+    font-size: 56px;
+  }
+}
+.search__form {
+  padding: 0 20px 60px;
+  @media (min-width: $s) {
+    width: 580px;
+    margin: 0 auto;
+  }
+  @media (min-width: $m) {
+    @include flexCenter();
+    width: 845px;
+    padding: 0 0 60px 0;
+  }
+}
+.search__group {
+  margin-bottom: 10px;
+  position: relative;
+  @media (min-width: $m) {
+    margin-bottom: 0;
+  }
+}
+.search__group--input {
+  flex: 4;
+  @media (min-width: $m) {
+    margin-right: 6px;
+  }
+}
+.search__group--select {
+  flex: 2;
+  @media (min-width: $m) {
+    margin-right: 7px;
+  }
+}
+.search__field {
+  display: block;
+  height: 57px;
+  width: 100%;
+  padding: 17px 13px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1;
+  color: $c-text;
+}
+.search__icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-right: 22px;
+}
+.search__field--select {
+  appearance: none;
+}
+.search__field--btn {
+  border-radius: 5px;
+  background-color: $c-secondary;
+  color: $white;
+  cursor: pointer;
+  flex: 1.4;
+  &:hover {
+    background-color: $c-secondary--darker;
+  }
+  svg {
+    vertical-align: bottom;
+    margin-right: 16px;
+  }
+}

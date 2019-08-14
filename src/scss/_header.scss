@@ -1,0 +1,147 @@
+.page-header {
+  background: $c-primary;
+}
+.page-header--index {
+  @media (min-width: $m) {
+    background: transparent;
+    padding-top: 24px;
+  }
+  @media (min-width: $l) {
+    padding: 32px 24px 0;
+  }
+  @media (min-width: $xl) {
+    padding: 64px 0 0 0;
+  }
+}
+.page-header__nav {
+  @include flexCenter();
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 8px 12px;
+  @media (min-width: $m) {
+    flex-wrap: nowrap;
+  }
+  @include boxed();
+}
+.page_header__icon {
+  @media (min-width: $s) {
+    width: 190px;
+    height: 47px;
+  }
+  @media (min-width: $m) {
+    margin-right: 16px;
+  }
+  @media (min-width: $l) {
+    margin-right: 22px;
+  }
+  @media (min-width: $xl) {
+    margin-right: 44px;
+  }
+}
+.page-header__collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  padding-top: 20px;
+  display: none;
+  @media (min-width: $m) {
+    display: block;
+    padding-top: 0;
+  }
+}
+.page-nav__list {
+  @media (min-width: $m) {
+    @include flexCenter();
+  }
+}
+.page-nav__link {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: $white;
+  font-weight: 300;
+  &:hover {
+    color: $c-text--light;
+  }
+  @media (min-width: $s) {
+    font-size: 18px;
+  }
+  @media (min-width: $m) {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  @media (min-width: $l) {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+}
+.page-nav__item--btn {
+  margin: 12px 0;
+  @media (min-width: $m) {
+    margin: 0 auto;
+  }
+  @media (min-width: $l) {
+    a {
+      font-size: 18px;
+    }
+  }
+}
+.page-nav__item--log-in {
+  &:hover {
+    g {
+      fill: $c-text--light;
+    }
+  }
+}
+.page-nav__item--lang {
+  padding: 12px 0;
+  @media (min-width: $m) {
+    margin-left: 22px;
+  }
+  @media (min-width: $l) {
+    margin-left: 42px;
+  }
+}
+.page-header__toggle {
+  margin-left: auto;
+  min-width: 44px;
+  height: 44px;
+  text-align: center;
+  display: block;
+  position: relative;
+  z-index: 30;
+  transform: all ease 0.3s;
+  cursor: pointer;
+  @media (min-width: $m) {
+    display: none;
+  }
+}
+.page-header__bar {
+  display: block;
+  width: 23px;
+  height: 2px;
+  position: absolute;
+  background-color: $white;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  top: 22px;
+  right: 0;
+  transform: translate(-50%, -50%);
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 23px;
+    height: 2px;
+    transition: all 0.3s ease;
+    outline: 1px solid transparent;
+    left: 0;
+    background-color: $white;
+  }
+  &::before {
+    top: -8px;
+  }
+  &::after {
+    top: 8px;
+  }
+}

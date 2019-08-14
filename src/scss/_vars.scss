@@ -1,0 +1,53 @@
+$c-primary: #24345c;
+$c-secondary: #50e3b3;
+
+$c-primary--darker: #1d2a4a;
+$c-secondary--darker: #22d49a;
+
+$c-overlay: #182545;
+$c-ads-border: #979797;
+$c-animation-border: #48443e;
+
+$c-switch-border: #a0a0a1;
+$c-switch-in: #c2f5e5;
+
+$c-single: #50e3c2;
+$c-monthly: #ffcd81;
+$c-unlimited: #ffb74a;
+$c-price-full: #474648;
+$c-price-border: #d5d5d5;
+
+$c-text: #6b696c;
+$c-text--light: #6d7893;
+$c-text--dark: #414042;
+
+$white: #fff;
+$black: #000;
+
+$s: 600px;
+$m: 900px;
+$l: 1200px;
+$xl: 1600px;
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+}
+@mixin borderBottom() {
+  border-bottom: 2px solid $c-text--light;
+  @media (min-width: $m) {
+    border-bottom: none;
+  }
+}
+@mixin borderRight() {
+  border-right: none;
+  @media (min-width: $m) {
+    border-right: 2px solid $c-text--light;
+  }
+}
+@mixin boxed() {
+  @media (min-width: $xl) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}

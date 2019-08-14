@@ -1,0 +1,94 @@
+* {
+  transition: all 0.2s ease;
+}
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+svg {
+  vertical-align: middle;
+}
+.btn {
+  display: block;
+  padding: 12px 28px;
+  border-radius: 24px;
+  text-align: center;
+  color: $white;
+  user-select: none;
+  line-height: 1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.btn--big {
+  @media (min-width: $s) {
+    display: inline-block;
+    padding: 0;
+    border-radius: 30px;
+    font-size: 18px;
+    width: 290px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+.btn--outline {
+  display: inline-block;
+  border: 2px solid $c-secondary;
+  background: transparent;
+  &:hover {
+    background-color: $c-secondary;
+  }
+}
+.btn--primary {
+  background-color: $c-primary;
+  &:hover {
+    background-color: $c-primary--darker;
+  }
+}
+.btn--secondary {
+  background-color: $c-secondary;
+  &:hover {
+    background-color: $c-secondary--darker;
+  }
+}
+.ad-sense {
+  background-color: $black;
+  border: 1px solid $c-ads-border;
+  margin: 0 auto;
+}
+.ad-sense--mobile {
+  width: 300px;
+  height: 50px;
+  @media (min-width: $m) {
+    width: 728px;
+    height: 90px;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.ad-sense--desktop {
+  width: 300px;
+  height: 250px;
+  @media (min-width: $l) {
+    width: 970px;
+  }
+}
+.hide--l {
+  @media (min-width: $l) {
+    display: none;
+  }
+}
+.display--l {
+  display: none;
+  @media (min-width: $l) {
+    display: block;
+  }
+}
